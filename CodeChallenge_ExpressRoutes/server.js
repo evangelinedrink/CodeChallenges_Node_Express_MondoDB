@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 //Handling request to the location path
-app.use("./locations", locationRouter); 
+app.use("/locations", locationRouter); 
 
 app.get("/", (req, res) => {
   console.log(req.headers);
